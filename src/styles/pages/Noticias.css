@@ -1,0 +1,95 @@
+
+.news-section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,#3c22a5, #FF99DC, #0D0D55);
+    color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título principal */
+.news-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #d9f103a5;
+    padding-bottom: 0.5rem;
+}
+
+/* Contenedor de las cards */
+.row {
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Card individual */
+.row .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px #d9f103a5;
+}
+
+/* Imagen dentro de la card */
+.row .card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Título de la noticia */
+.row .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem;
+    color: #fff;
+}
+
+/* Descripción o texto */
+.row .card-text {
+    color: #f1f1f1;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* Botón dentro de la card (si lo hay) */
+.row .btn {
+    background-color: #d9f103a5;
+    color: #0D0D55;
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.row .btn:hover {
+    background-color: #fff;
+    color: #0D0D55;
+}
+
+/* Ajuste responsive */
+@media (max-width: 768px) {
+    .news-title {
+        font-size: 2rem;
+    }
+
+    .row {
+        gap: 1.5rem;
+    }
+}
