@@ -1,42 +1,51 @@
-
-// karma.conf.cjs
+// karma.conf.js
 module.exports = function (config) {
     config.set({
         frameworks: ['jasmine'],
         files: [
-            'src/test/**/*.spec.jsx'
+            'src/**/*.spec.jsx',
         ],
         preprocessors: {
-            'src/test/**/*.spec.jsx': ['webpack']
+            'src/**/*.spec.jsx': ['webpack'],
         },
         webpack: {
             mode: 'development',
             module: {
                 rules: [
                     {
-                        test: /\.css$/i,
-                        use: ['style-loader', 'css-loader'],
+                        test: /\.jsx?$/,
+                        exclude: /node_modules/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env', '@babel/preset-react'],
+                            },
+                        },
                     },
                     {
-                        test: /\.(png|jpe?g|gif|webp)$/i,
-                        use: [
-                            {
-                                loader: 'file-loader',
-                                options: {
-                                    name: '[name].[ext]',
-                                    esModule: false
-                                }
-                            }
-                        ]
-                    }
-                ]
+                        test: /\.css$/,
+                        use: ['style-loader', 'css-loader'],
+                    },
+                ],
             },
             resolve: {
-                extensions: ['.js', '.jsx']
-            }
+                extensions: ['.js', '.jsx'],
+            },
         },
-        reporters: ['progress', 'kjhtml'],
+        reporters: ['progress', 'kjhtml', 'coverage'],
+        coverageReporter: {
+            type: 'html',
+            dir: 'coverage/',
+        },
         browsers: ['ChromeHeadless'],
-        singleRun: true
+        singleRun: true,
+        restartOnFileChange: true,
+        plugins: [
+            'karma-jasmine',
+            'karma-webpack',
+            'karma-chrome-launcher',
+            'karma-coverage',
+            'karma-jasmine-html-reporter'
+        ]
     });
 };

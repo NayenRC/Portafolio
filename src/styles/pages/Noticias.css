@@ -1,17 +1,5 @@
 
-.news-section {
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(to bottom,#3c22a5, #FF99DC, #0D0D55);
-    color: #fff;
-    padding: 4rem 2rem;
-    border-radius: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* Título principal */
 .news-title {
     font-size: 2.5rem;
     font-weight: 500;
@@ -23,7 +11,6 @@
     padding-bottom: 0.5rem;
 }
 
-/* Contenedor de las cards */
 .row {
     gap: 2rem;
     justify-content: center;
@@ -32,7 +19,7 @@
 
 /* Card individual */
 .row .card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #ff99db95;
     border: none;
     border-radius: 15px;
     color: #fff;

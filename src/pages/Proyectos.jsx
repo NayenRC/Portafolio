@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import proyectos from '../data/Proyectos';
 import ProyectoCard from '../components/organisms/ProyectoCard';
-import  '../styles/pages/Noticias.css'
+import '../styles/pages/Proyectos.css'
 
 function Proyectos() {
     return (

@@ -9,14 +9,10 @@ function ProyectoCard({ proyecto }) {
     const navigate = useNavigate();
 
     return (
-        <Card style={{ width: '18rem' }} className="m-2">
+        <Card className="proyecto-card">
             <Image src={proyecto.image} alt={proyecto.name} className="card-img-top" />
             <Card.Body>
-                <CardBody
-                    title={proyecto.name}
-                    description={proyecto.description}
-                    price={proyecto.price}
-                />
+                <CardBody title={proyecto.name}description={proyecto.description}/>
                 <Button
                     variant="primary"
                     onClick={() => window.open(proyecto.github, "_blank")}
