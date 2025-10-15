@@ -10,7 +10,7 @@ function Home() {
       <Container className="text-center">
         <Image src={perfil} alt="Perfil" className="home-image" />
         <h1 className="home-title">Nayen Román</h1>
-        <p>Bienvenidos a nuestro sitio web.</p>
+        <p>Bienvenidos! Actualemnte soy estudiante de informática y estoy en mi segundo año de carrera, te invito a conocer algunos de mis proyectos y noticias que me inspiraan, espero que a ti tambien. Saludos</p>
       </Container>
     </section>
   );

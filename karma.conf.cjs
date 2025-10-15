@@ -1,13 +1,17 @@
 // karma.conf.js
 module.exports = function (config) {
     config.set({
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'webpack'],
+
         files: [
-            'src/**/*.spec.jsx',
+            'src/test/setupTests.js',
+            'src/test/**/*.spec.jsx'
         ],
         preprocessors: {
-            'src/**/*.spec.jsx': ['webpack'],
+            'src/test/setupTests.js': ['webpack'],
+            'src/test/**/*.spec.jsx': ['webpack']
         },
+
         webpack: {
             mode: 'development',
             module: {
@@ -18,20 +22,32 @@ module.exports = function (config) {
                         use: {
                             loader: 'babel-loader',
                             options: {
-                                presets: ['@babel/preset-env', '@babel/preset-react'],
-                            },
-                        },
+                                presets: [
+                                    '@babel/preset-env',
+                                    '@babel/preset-react'
+                                ]
+                            }
+                        }
                     },
                     {
                         test: /\.css$/,
-                        use: ['style-loader', 'css-loader'],
+                        use: ['style-loader', 'css-loader']
                     },
-                ],
+                    {
+                        // 👇 este loader maneja imágenes (corrige tu error)
+                        test: /\.(png|jpe?g|gif|webp|svg)$/i,
+                        type: 'asset/resource',
+                        generator: {
+                            filename: 'static/[name][ext]'
+                        }
+                    }
+                ]
             },
             resolve: {
-                extensions: ['.js', '.jsx'],
-            },
+                extensions: ['.js', '.jsx']
+            }
         },
+
         reporters: ['progress', 'kjhtml', 'coverage'],
         coverageReporter: {
             type: 'html',
