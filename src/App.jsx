@@ -6,6 +6,8 @@ import Proyectos from './pages/Proyectos';
 import Noticias from './pages/Noticias';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Footer from './components/organisms/Footer';
+
 function App() {
   return (
     <>
@@ -17,6 +19,7 @@ function App() {
         <Route path="/noticias" element={<Noticias />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </>
   );
 }
