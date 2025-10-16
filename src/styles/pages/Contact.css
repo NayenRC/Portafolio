@@ -1,0 +1,22 @@
+
+.contact-title {
+    font-size: 4rem; /* más grande */
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    color: #ff7edb; /* rosa más claro y suave */
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 4px 12px rgba(255, 105, 180, 0.6);
+    
+    padding-bottom: 0.7rem;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-title:hover {
+    transform: scale(1.05);
+    text-shadow: 
+        0 0 25px rgba(255, 255, 255, 0.9),
+        0 0 40px rgba(255, 182, 242, 0.9);
+}

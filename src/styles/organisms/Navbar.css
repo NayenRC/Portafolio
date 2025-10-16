@@ -1,9 +1,20 @@
+/* ======== ESTILO BASE ======== */
 .navbar-custom {
     background-color: #d9f103a5;
     padding: 1rem 2rem;
     transition: background-color 0.3s ease;
 }
 
+.navbar-custom .navbar-brand {
+    color: #0d0d55;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: #D2C7FF;
+}
 
 .navbar-custom .nav-link {
     color: #0d0d55;
@@ -13,25 +24,72 @@
     transition: color 0.3s ease;
 }
 
-
 .navbar-custom .nav-link:hover {
-    color: #D2C7FF;
-    
-}
-
-
-.navbar-custom .navbar-brand {
-    color:#0d0d55 ;
-    font-weight: bold;
-    font-size: 2rem;
-    transition: color 0.3s ease;
-}
-
-
-.navbar-custom .navbar-brand:hover {
     color: #D2C7FF;
 }
 
 .navbar-custom .navbar-toggler {
     border-color: transparent;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+/* ======== RESPONSIVIDAD ======== */
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 992px) {
+    .navbar-custom {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .navbar-custom .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+}
+
+/* Pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .navbar-custom .nav-link {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    /* Hace que el menú colapsado sea más claro */
+    .navbar-collapse {
+        background-color: rgba(217, 241, 3, 0.9);
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+
+    .navbar-toggler {
+        background-color: rgba(13, 13, 85, 0.1);
+    }
+}
+
+/* Extra pequeño (teléfonos muy angostos) */
+@media (max-width: 480px) {
+    .navbar-custom .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 1rem;
+    }
 }

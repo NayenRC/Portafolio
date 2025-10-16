@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Text from '../components/atoms/Text.jsx';
 import DynamicForm from '../components/molecules/DynamicForm.jsx';
 import Button from '../components/atoms/Button.jsx'; // Importar tu componente Button
+import '../styles/pages/Contact.css';
 
 function Contact() {
     // Estado inicial basado en los IDs de los inputs
@@ -55,7 +56,7 @@ function Contact() {
 
     return (
         <Container className="my-5">
-            <Text variant="h1">Contacto</Text>
+            <Text variant="h1" className="contact-title">Contact</Text>
             <Text variant="p">Llena el formulario para poder contactarte</Text>
             <DynamicForm inputs={formInputs} />
             <div className="mt-3">

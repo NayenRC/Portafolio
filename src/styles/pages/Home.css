@@ -1,3 +1,4 @@
+/* ======== ESTILO BASE ======== */
 .home-section {
     width: 100%;
     min-height: 100vh;
@@ -8,6 +9,7 @@
     background: linear-gradient(to bottom, #FF99DC, #0D0D55);
     color: #fff;
     padding: 4rem 2rem;
+    text-align: center;
 }
 
 .home-title {
@@ -17,7 +19,6 @@
     margin-bottom: 1.5rem;
 }
 
-
 .home-image {
     width: 240px;
     height: 240px;
@@ -25,10 +26,89 @@
     object-fit: cover;
     margin-bottom: 1.5rem;
     box-shadow: 0 8px 20px #D2C7FF;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .home-image:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px #d9f103a5;
-    border-color: black;
+}
+
+/* ======== RESPONSIVIDAD ======== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .home-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .home-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .home-section {
+        padding: 2rem 1rem;
+        min-height: 90vh;
+    }
+
+    .home-image {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 1rem;
+    }
+
+    .home-title {
+        font-size: 2rem;
+    }
+}
+
+/* Teléfonos pequeños (menos de 480px) */
+@media (max-width: 480px) {
+    .home-section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .home-image {
+        width: 130px;
+        height: 130px;
+    }
+
+    .home-title {
+        font-size: 1.7rem;
+    }
+}
+
+.icon-li {
+    width: 60px;
+    height: 40px;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-li:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.git-icon {
+    width: 60px;
+    height: 40px;
+    margin: 0.5rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.git-icon:hover,
+.icon-li:hover {
+    transform: scale(1.2);
+    opacity: 1;
 }

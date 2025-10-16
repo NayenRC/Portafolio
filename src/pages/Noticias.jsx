@@ -8,7 +8,7 @@ function Noticias() {
     return (
         <Container className="mt-5">
             <div className="news-section">
-                <h2 className="news-title text-center">Noticias</h2>
+                <h2 className="news-title text-center">News</h2>
 
                 <div className="row justify-content-center">
                     {news.map((item) => (

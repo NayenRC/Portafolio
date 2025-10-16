@@ -8,7 +8,7 @@ function Footer() {
         <footer className="footer-section">
             <Container className="text-center">
                 <Text className="footer-text">
-                    © {new Date().getFullYear()} Nayen Roman - Derechos reservados
+                    © {new Date().getFullYear()} Nayen Román - Derechos reservados
                 </Text>
             </Container>
         </footer>

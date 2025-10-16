@@ -7,7 +7,7 @@ import '../styles/pages/Proyectos.css'
 function Proyectos() {
     return (
         <Container className="my-5">
-            <h1>Proyectos</h1>
+            <h2 className="section-title">Proyects</h2>
             <Row>
                 {proyectos.map((proyecto) => (
                     <ProyectoCard key={proyecto.id} proyecto={proyecto} />
