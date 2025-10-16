@@ -1,5 +1,3 @@
-
-
 [
     {
         "id": 1,
@@ -7,7 +5,7 @@
         "fecha": "06/05/2025",
         "contenido": "Con su obsesión por los lunares, las calabazas y las flores, esta artista japonesa se ha convertido en una de las más conocidas del mundo.",
         "link": "https://www.elledecor.com/es/arte/g40865896/yayoi-kusama-obras-arte-mas-famosas-importantes/",
-        "image": "/noticia1.webp"
+        "image": "src/assets/img/noticia1.webp"
     },
     {
         "id": 2,
@@ -15,6 +13,6 @@
         "fecha": "2 de enero de 2025",
         "contenido": "Muchos aficionados al arte macabro y sangriento se sienten atraídos por el surrealismo distópico de Zdzisław Beksinski..",
         "link":"https://www.dailyartmagazine.com/the-dystopian-surrealism-of-zdzislaw-beksinski/",
-        "image": "/noticia2.webp"
+        "image": "src/assets/img/noticia2.webp"
     }
 ]

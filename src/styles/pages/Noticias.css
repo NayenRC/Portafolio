@@ -12,15 +12,9 @@
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 2rem;
+    justify-content: center;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    box-sizing: border-box;
 }
 
 /* Card individual */
@@ -32,10 +26,6 @@
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(33.333% - 2rem); /* 3 columnas en escritorio */
-    min-width: 280px;
-    overflow: hidden;
-
 }
 
 .row .card:hover {
@@ -49,7 +39,6 @@
     border-top-right-radius: 15px;
     height: 200px;
     object-fit: cover;
-    width: 100%;
 }
 
 /* Título de la noticia */
@@ -65,16 +54,15 @@
     color: #f1f1f1;
     font-size: 0.95rem;
     margin-bottom: 1rem;
-    padding: 0 1rem;
 }
 
+/* Botón dentro de la card (si lo hay) */
 .row .btn {
     background-color: #d9f103a5;
     color: #0D0D55;
     border: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    margin: 0 1rem 1rem;
 }
 
 .row .btn:hover {
@@ -87,54 +75,8 @@
     .news-title {
         font-size: 2rem;
     }
-.row .card {
-        width: calc(50% - 1.5rem); /* 2 columnas */
-    }
 
     .row {
         gap: 1.5rem;
-    }
-}
-/* Celulares grandes */
-@media (max-width: 768px) {
-    .news-title {
-        font-size: 1.8rem;
-    }
-
-    .row .card {
-        width: 100%; /* 1 columna */
-    }
-
-    .row {
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-
-    .row .card img {
-        height: 180px;
-    }
-}
-
-/* Celulares pequeños */
-@media (max-width: 480px) {
-    .news-title {
-        font-size: 1.5rem;
-    }
-
-    .row {
-        gap: 1rem;
-        padding: 0 0.8rem;
-    }
-
-    .row .card {
-        border-radius: 12px;
-    }
-
-    .row .card-title {
-        font-size: 1.1rem;
-    }
-
-    .row .card-text {
-        font-size: 0.9rem;
     }
 }
