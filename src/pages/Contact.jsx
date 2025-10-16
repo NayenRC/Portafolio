@@ -56,7 +56,7 @@ function Contact() {
     return (
         <Container className="my-5">
             <Text variant="h1" className="contact-title">Contact</Text>
-            <Text variant="p">Llena el formulario para poder contactarte</Text>
+            <Text variant="p">Llena el formulario si deseas contactarme o darme alguna sugerencia.</Text>
             <DynamicForm inputs={formInputs} />
             <div className="mt-3">
                 <Button variant="primary" onClick={handleSubmit} className="me-2">

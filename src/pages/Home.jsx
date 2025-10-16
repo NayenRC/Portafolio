@@ -16,11 +16,11 @@ function Home() {
         >
           <Image src={perfil} alt="Perfil" className="home-image" />
         </a>
-        <h1 className="home-title">Nayen Román</h1>
-        <p>Bienvenidos! Actualemnte soy estudiante de informática y estoy en mi segundo año de carrera, te invito a conocer algunos de mis proyectos y noticias que me inspiran, espero que a ti tambien. Saludos</p>
+        <h1 className="home-title">Nayen Román </h1>
+        <p>Bienvenidos! Actualmente soy estudiante de informática y estoy en mi segundo año de carrera, te invito a conocer algunos de mis proyectos y noticias que me inspiran, espero que a ti tambien. ¡Saludos!</p>
 
         <a
-          href="https://www.linkedin.com/in/nayen-roman?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          href="https://www.linkedin.com/in/nayen-roman"
           target="_blank"
         >
           <Image src={iconLi} alt="iconLi" className="icon-li" />

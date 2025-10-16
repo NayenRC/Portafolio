@@ -1,4 +1,4 @@
-/* ======== ESTILO BASE ======== */
+/*base de la pagina*/
 .home-section {
     width: 100%;
     min-height: 100vh;
@@ -10,6 +10,14 @@
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
+}
+
+p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    color: #f0c1e0;
 }
 
 .home-title {
@@ -88,23 +96,25 @@
 
 .icon-li {
     width: 60px;
-    height: 40px;
+    height: 60px;
     margin-top: 0.5rem;
     opacity: 0.8;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.icon-li:hover {
-    transform: scale(1.2);
-    opacity: 1;
-}
+
 
 .git-icon {
-    width: 60px;
+    width: 80px;
     height: 40px;
     margin: 0.5rem;
     opacity: 0.8;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: brightness(0) invert(1);
+
+
+
+
 }
 
 .git-icon:hover,
