@@ -27,7 +27,7 @@
     gap: 2rem;
 }
 
-/* Card individual (si tu ProyectoCard tiene una clase propia, puedes adaptarla aquí) */
+/* Card individual 
 .proyecto-card {
     background-color: #ff99db95;
     border-radius: 15px;
@@ -55,3 +55,4 @@
 }
 
 /* Título dentro de la ca*
+
