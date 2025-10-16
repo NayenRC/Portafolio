@@ -1,43 +1,67 @@
 /* Estilos de la app */
 
 /* Contenedor principal de las páginas */
-.app-main {
-  width: 100%;
-  min-height: 100vh;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
   box-sizing: border-box;
 }
 
+/* Logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
 
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
 
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
 
+/* Animación de rotación del logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
 
 /* Tarjetas genéricas */
 .card {
   padding: 2em;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-  margin: 1rem auto;
-  max-width: 600px;
+  color: #fff;
 }
 
-/* Texto secundario */
+/* Texto complementario */
 .read-the-docs {
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  color: #888;
 }
 
-/* response*/
+/* ================================
+   🔹 RESPONSIVIDAD
+================================= */
 
 /* Tablets */
 @media (max-width: 1024px) {
-  .app-main {
+  #root {
     padding: 1.5rem;
   }
 
@@ -48,18 +72,22 @@
 
 /* Celulares grandes */
 @media (max-width: 768px) {
-  .app-main {
+  #root {
     padding: 1.2rem;
   }
 
   .logo {
     height: 4.5em;
   }
+
+  .card {
+    padding: 1.5em;
+  }
 }
 
 /* Celulares pequeños */
 @media (max-width: 480px) {
-  .app-main {
+  #root {
     padding: 1rem;
   }
 
@@ -68,6 +96,10 @@
   }
 
   .card {
-    padding: 1.5em;
+    padding: 1.2em;
+  }
+
+  .read-the-docs {
+    font-size: 0.85rem;
   }
 }
