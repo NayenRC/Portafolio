@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Text from '../components/atoms/Text.jsx';
 import DynamicForm from '../components/molecules/DynamicForm.jsx';
-import Button from '../components/atoms/Button.jsx'; // Importar tu componente Button
+import Button from '../components/atoms/Button.jsx'; 
 import '../styles/pages/Contact.css';
 
 function Contact() {
-    // Estado inicial basado en los IDs de los inputs
     const initialFormData = {
         name: '',
         email: '',
